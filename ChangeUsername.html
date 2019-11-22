@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -41,28 +42,40 @@
   <section class="section">
     <div class="fluid-container">
       <div class="content">
-        <h1>Name of the page goes here</h1>
+        <h1>Change Username</h1>
         <p>
-          And the content of the page goes here. It can be anything.
+          Bold labels with * are required fields. The Username should be between 5-10 characters.
         </p>
         <p>
-          We are using Bulma, a CSS framework (read: a library of user interface components ready
-          to be used), so check it out: <a href="https://bulma.io/">https://bulma.io/</a>
+          <b> Old Username* </b>
+          <input class="input" type="text" placeholder="">
         </p>
         <p>
-          Now for some filler content:
+          <b> New Username* </b>
+          <input class="input" type="text" placeholder="">
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor tellus cursus efficitur rhoncus. Integer id
-          convallis eros, vel condimentum nulla. Sed porta mi at suscipit blandit. Vestibulum nec justo et nisl tincidunt
-          faucibus. Donec sem neque, dapibus et massa sit amet, congue efficitur sapien. Quisque vel urna dignissim, efficitur
-          quam a, aliquam turpis. Suspendisse potenti. Donec id efficitur neque, in auctor arcu. Nullam venenatis tortor et
-          volutpat fermentum. Vestibulum ut maximus urna, et scelerisque nisl.
+          <b> Confirm New Username* <b>
+          <input class="input" type="text" placeholder="">
         </p>
+        <p>
+        <div class="control">
+        <button onclick="myFunction()" class="button is-primary">Submit</button>
+        <script>
+        function myFunction() {
+        alert("Username Sucessfully Changed.");
+        }
+        </script>
+
+        </body>
+        </html>
+
+        </p>
+
+        </div>
       </div>
     </div>
   </section>
 </body>
 
 </html>
-
