@@ -42,7 +42,14 @@
     <div class="fluid-container">
       <div class="content">
         <h1>Stress Meter</h1>
-        <p id="H">UHHHHH</p>
+        <br>
+        <br>
+        <p id="graph">graph</p>
+        <br>
+        <p id="msg">message</p>
+        <br>
+        <p> If you are feeling overwhelmed check out our <a href = "https://tuankiet65.github.io/swen101/MentalHealthResources.html"> resource tab</a></p>
+        <p> Or if you need immediate help please see our <a href = "https://tuankiet65.github.io/swen101/UrgentHelpandHotlines.html"> urgent help tab</a></p>
         <script type="text/javascript">
         function getUrlParam(param)
         {
@@ -53,7 +60,18 @@
           return match ? match[1] : "";
         }
         var param = getUrlParam("stress_value");
-        document.getElementById("H").innerHTML = param;
+        if (param <= 3){
+          result = '<progress class="progress is-success" value='+param+' max="10">'+(param/10)+'%</progress>';
+          msg = "Your doing great!";
+        } else if (param > 3 && param <= 7){
+          result = '<progress class="progress is-warning" value='+param+' max="10">'+(param/10)+'%</progress>';
+          msg = "You seem like you could benefit from some breathing excersizes!";
+        } else {
+          result = '<progress class="progress is-danger" value='+param+' max="10">'+(param/10)+'%</progress>';
+          msg = "Don't be afraid to take some time for yourself to unwind. It seems like you deserve it!";
+        }
+        document.getElementById("graph").innerHTML = result;
+        document.getElementById("msg").innerHTML = msg;
         </script>
         <div class="buttons">
          <div style="position: absolute; right: 5px;">
