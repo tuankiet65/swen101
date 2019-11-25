@@ -1,61 +1,78 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registration</title>
+  <title>Register</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <style>
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .box {
+      min-width: 500px;
+      max-width: 50%;
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://github.com/tuankiet65/swen101">
-        <b>MindPlanner</b>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="Dashboard.html">
-          <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard
-        </a>
-        <a class="navbar-item" href="Calendar.html">
-          <i class="fas fa-calendar-alt"></i>&nbsp;Calendar
-        </a>
-        <a class="navbar-item" href="Sleep.html">
-          <i class="fas fa-bed"></i>&nbsp;Sleep
-        </a>
-        <a class="navbar-item" href="StressMeter.html">
-          Stress Meter
-        </a>
-        <a class="navbar-item" href="AccountInformation.html">
-          <i class="fas fa-user"></i>&nbsp;Account
-        </a>
-      </div>
-    </div>
-  </nav>
 
   <section class="section">
-    <div class="fluid-container">
       <div class="content">
-        <h1>Registration</h1>
-        <p>
-          *add logo
-          <form>
-            <input type="text" name="Username">Username</input> <br>
-            <input type="password" name="Password">Password</input> <br>
-            <input type="text" name="email">Email</input> <br>
-            <input type="text" name="Zipcode">Zipcode</input> <br>
-          </form>
-        </p>
-        <p>
-          *add register button
-        </p>
+        <h1>Register</h1>
+        <div class="box">
+            <form action="Dashboard.html" method="get">
+
+              <div class="field">
+                <label class="label">Username</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="adam.smith" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                  <input class="input" type="password" placeholder="hunter2" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input class="input" type="email" placeholder="adam.smith@rit.edu" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Zipcode</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="14623" />
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <button action="submit" class="button is-primary is-fullwidth">Register</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <a href="Login.html" class="button is-fullwidth">Login</a>
+                </div>
+              </div>
+
+            </form>
+        </div>
       </div>
-    </div>
   </section>
 </body>
 
