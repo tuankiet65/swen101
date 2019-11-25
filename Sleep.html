@@ -7,6 +7,13 @@
   <title>Sleep</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://code.highcharts.com/highcharts.src.js"></script>
+  <style>
+    .chart {
+      width: 600px;
+      height: 600px;
+    }
+  </style>
 </head>
 
 <body>
@@ -41,13 +48,13 @@
   <section class="section">
     <div class="fluid-container">
       <div class="content">
-        <h1 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Sleep Schedule</h1>
-        <img src="https://media.discordapp.net/attachments/357320013469974532/647156471087497217/unknown.png" alt="Sleep Graph">
+        <h1>Sleep Schedule</h1>
+        <div id="chart"></div>
         <p>
           <b>Your sleep schedule is:
         </p>
         <p style="color:red; font-size:40px">
-          POOR<b/>
+          POOR<b />
         </p>
         <p>
 
@@ -55,6 +62,31 @@
       </div>
     </div>
   </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var myChart = Highcharts.chart('chart', {
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: 'Sleep hours'
+        },
+        xAxis: {
+          type: "datetime"
+        },
+        yAxis: {
+          title: {
+            text: 'Hours of sleep'
+          }
+        },
+        series: [{
+          data: [5, 6, 7, 8, 7, 6, 5, 6, 7, 6, 5, 5, 6, 5, 7, 10, 5, 6, 7, 8, 5, 6, 7, 8],
+          pointStart: Date.UTC(2019, 10, 1),
+          pointInterval: 60 * 60 * 24 * 1000
+        }]
+      });
+    });
+  </script>
 </body>
 
 </html>
