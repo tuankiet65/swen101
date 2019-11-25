@@ -8,17 +8,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="https://code.highcharts.com/highcharts.src.js"></script>
-  <style>
-    .chart {
-      width: 600px;
-      height: 600px;
-    }
-
-    .sleep-rating {
-      color: red;
-      font-size: 40px;
-    }
-  </style>
 </head>
 
 <body>
@@ -54,30 +43,36 @@
     <div class="fluid-container">
       <div class="content">
         <h1>Sleep Schedule</h1>
-        <div id="chart"></div>
-        <p>
-          <b>Your sleep schedule is:</b>
-        </p>
-        <p class="sleep-rating">
-          <b>POOR</b>
-        </p>
-        <form action="">
-          <div class="field">
-            <label class="label">Date</label>
-            <div class="control">
-              <input class="input" type="date" id="date">
-            </div>
+        <div class="columns">
+          <div class="column is-three-quarters">
+            <div id="chart"></div>
           </div>
-          <div class="field">
-            <label class="label">Sleep hours</label>
-            <div class="control">
-              <input class="input" type="number" placeholder="10" id="sleep-hours">
-            </div>
+
+          <div class="column">
+            <p>
+              <h3>Your sleep schedule is:</h3>
+              <b class="has-text-danger is-size-2">POOR</b>
+            </p>
+            <h3>Log sleep hours:</h3>
+            <form action="">
+              <div class="field">
+                <label class="label">Date</label>
+                <div class="control">
+                  <input class="input" type="date" id="date">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Sleep hours</label>
+                <div class="control">
+                  <input class="input" type="number" placeholder="10" id="sleep-hours">
+                </div>
+              </div>
+              <button type="button" onclick="add_point(); return false" class="button is-primary">
+                Add sleep event
+              </button>
+            </form>
           </div>
-          <button type="button" onclick="add_point(); return false" class="button is-primary">
-            Add sleep event
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   </section>
