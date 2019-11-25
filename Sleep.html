@@ -13,6 +13,11 @@
       width: 600px;
       height: 600px;
     }
+
+    .sleep-rating {
+      color: red;
+      font-size: 40px;
+    }
   </style>
 </head>
 
@@ -51,20 +56,35 @@
         <h1>Sleep Schedule</h1>
         <div id="chart"></div>
         <p>
-          <b>Your sleep schedule is:
+          <b>Your sleep schedule is:</b>
         </p>
-        <p style="color:red; font-size:40px">
-          POOR<b />
+        <p class="sleep-rating">
+          <b>POOR</b>
         </p>
-        <p>
-
-        </p>
+        <form action="">
+          <div class="field">
+            <label class="label">Date</label>
+            <div class="control">
+              <input class="input" type="date" id="date">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Sleep hours</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="10" id="sleep-hours">
+            </div>
+          </div>
+          <button type="button" onclick="add_point(); return false" class="button is-primary">
+            Add sleep event
+          </button>
+        </form>
       </div>
     </div>
   </section>
   <script>
+    var myChart;
     document.addEventListener('DOMContentLoaded', function () {
-      var myChart = Highcharts.chart('chart', {
+      myChart = Highcharts.chart('chart', {
         chart: {
           type: 'line'
         },
@@ -86,6 +106,13 @@
         }]
       });
     });
+
+    function add_point() {
+      var date = document.getElementById("date").valueAsDate.getTime();
+      var sleep_hours = document.getElementById("sleep-hours").value;
+      sleep_hours = parseInt(sleep_hours);
+      myChart.series[0].addPoint([date, sleep_hours]);
+    };
   </script>
 </body>
 
