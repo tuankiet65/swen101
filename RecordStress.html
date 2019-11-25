@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Record Stress</title>
+  <title>Record Your Sleep</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
@@ -12,7 +12,7 @@
 <body>
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://github.com/tuankiet65/swen101">
+      <a class="navbar-item" href="https://github.com/tuankiet65/swen-101">
         <b>MindPlanner</b>
       </a>
     </div>
@@ -43,26 +43,38 @@
       <div class="content">
         <h1>Record Stress Level</h1>
         <p>
-	
-	  <script> document.write(new Date().toLocaleDateString()); </script> *add border and day selection option
-
-        </p>
-        <p>
-
-          What is your current stress level on a scale from 0-10? *add selection box
-
-	  Notes on any stressful events: *add empty lines
-
-	  Notes on what destress tools you tried and how the helped: *add empty lines
-
-        </p>
-        <p>
-          *add return and save buttons
-        </p>
+	         <script> document.write(new Date().toLocaleDateString()); </script>
+           <form action="file:///C:/Users/Alanna/Desktop/SWEN101/HTML/swen101-master/StressMeter.html" method="GET">
+             <div>
+               <label for="stress">What is your current stress level on a scale from 0-10?:</label>
+               <input class="input" type="text" id="stress" name="stress_value">
+             </div>
+             <br>
+             <br>
+             <div>
+               <label for="notes">Notes on any stressful events:</label>
+               <textarea class="input" id="notes" name="stress_notes"></textarea>
+             </div>
+             <br>
+             <br>
+             <div>
+               <label for="tools">Notes on what destress tools you tried and how the helped:</label>
+               <textarea class="input" id="tools" name="stress_tools"></textarea>
+             </div>
+             <div class="buttons">
+          	  <div style="position: absolute; bottom: 5px; right: 5px;">
+               <button type="submit" class="button is-info is-light">Save your stress log.</button>
+              </div>
+             </div>
+             <div class="buttons">
+              <div style="position: absolute; bottom: 5px;">
+               <button onclick="window.location.href = 'http://htmlpreview.github.io/?https://github.com/tuankiet65/swen101/blob/master/StressMeter.html';" class="button is-info is-light"> Return </button>
+              </div>
+             </div>
+            </form>
+          </p>
+        </div>
       </div>
-    </div>
-  </section> 
-
-</body>
+    </section>
 
 </html>
