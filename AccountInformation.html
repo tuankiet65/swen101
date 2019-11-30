@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -45,30 +44,129 @@
         <h1>Account Information</h1>
         <p>
           Here you can access the settings for your account including username, email, password & notification settings.
+          Labels with * are required fields.
         </p>
-        <p>
 
-  
+        <div class="columns">
+          <div class="column">
+            <h3>Change Email</h3>
+            <form>
+              <div class="field">
+                <label class="label"><b>Current Email</b></label>
+                <div class="control">
+                  <input class="input" type="text" value="adam.smith@gmail.com" disabled>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>New Email*</b></label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-email@rit.edu" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>Confirm New Email*</b></label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-email@rit.edu" required>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-fullwidth is-primary" type="button" onclick="change_email(); return false">
+                    Change Email
+                  </button>
+                </div>
+              </div>
+            </form>
 
-         <div class="buttons">
-         <a class=""href="https://tuankiet65.github.io/swen101/ChangeUsername.html"><button class="button is-info is-light"><i class="fas fa-signature"></i>Change Username</button>
-         </div>
-         
-         <div class="buttons">
-         <a class=""href="https://tuankiet65.github.io/swen101/ChangeEmail.html"><button class="button is-info is-light"><i class="fab fa-mailchimp"></i>Change Email</button>
-         </div>
-         <div class="buttons">
-         <a class=""href="https://tuankiet65.github.io/swen101/ChangePassword.html"><button class="button is-info is-light"><i class="fas fa-lock"></i>Change Password</button>
-         </div>
-         
-         </div>
-         <a class=""href="https://tuankiet65.github.io/swen101/GetNotified.html"><button class="button is-info is-light"><i class="fas fa-bell"></i>Notification Settings</button>
-         </div>
-         <p>
-          
-        </p>
+            <h3>Change Username</h3>
+            <form>
+              <div class="field">
+                <label class="label">Current Username</label>
+                <div class="control">
+                  <input class="input" type="text" value="adam.smith" disabled>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">New Username*</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-username" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Confirm New Username*</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-username" required>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-fullwidth is-primary" type="button"
+                    onclick="change_username(); return false">
+                    Change Username
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="column">
+            <h3>Change Password</h3>
+            <form>
+              <div class="field">
+                <label class="label"><b>Current Password*</b></label>
+                <div class="control">
+                  <input class="input" type="password" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>New Password*</b></label>
+                <div class="control">
+                  <input class="input" type="password" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>Confirm New Password*</b></label>
+                <div class="control">
+                  <input class="input" type="password" required>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-fullwidth is-primary" type="button"
+                    onclick="change_password(); return false">
+                    Change Password
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <h3>Get Notified</h3>
+            <p>
+              Enable or disable email notifications.
+            </p>
+            <div class="buttons">
+              <button onclick="enable_notification()" class="button is-fullwidth is-primary">Enable</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   </section>
+  <script>
+    function change_email() {
+      alert("Email Sucessfully Changed.");
+    }
+
+    function change_password() {
+      alert("Password Sucessfully Changed.");
+    }
+
+    function change_username() {
+      alert("Username Sucessfully Changed.");
+    }
+
+    function enable_notification() {
+      alert("Notifications have been enabled.");
+    }
+  </script>
 </body>
+
 </html>
