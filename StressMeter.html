@@ -43,7 +43,7 @@
     </div>
   </nav>
 
- <section class="section">
+  <section class="section">
     <div class="fluid-container">
       <div class="content">
         <h1>Stress Meter</h1>
@@ -56,32 +56,32 @@
         <p> If you are feeling overwhelmed check out our <a href="MentalHealthResources.html"> resource tab</a></p>
         <p> Or if you need immediate help please see our <a href="UrgentHelpandHotlines.html"> urgent help tab</a></p>
         <script type="text/javascript">
-        function getUrlParam(param)
-        {
-          param = param.replace(/([\[\](){}*?+^$.\\|])/g, "\\$1");
-          var regex = new RegExp("[?&]" + param + "=([^&#]*)");
-          var url   = decodeURIComponent(window.top.location.href);
-          var match = regex.exec(url);
-          return match ? match[1] : "";
-        }
-        var param = getUrlParam("stress_value");
-        if (param <= 3){
-          result = '<progress class="progress is-success" value='+param+' max="10">'+(param/10)+'%</progress>';
-          msg = "Your doing great!";
-        } else if (param > 3 && param <= 7){
-          result = '<progress class="progress is-warning" value='+param+' max="10">'+(param/10)+'%</progress>';
-          msg = "You seem like you could benefit from some breathing excersizes!";
-        } else {
-          result = '<progress class="progress is-danger" value='+param+' max="10">'+(param/10)+'%</progress>';
-          msg = "Don't be afraid to take some time for yourself to unwind. It seems like you deserve it!";
-        }
-        document.getElementById("graph").innerHTML = result;
-        document.getElementById("msg").innerHTML = msg;
+          function getUrlParam(param) {
+            param = param.replace(/([\[\](){}*?+^$.\\|])/g, "\\$1");
+            var regex = new RegExp("[?&]" + param + "=([^&#]*)");
+            var url = decodeURIComponent(window.top.location.href);
+            var match = regex.exec(url);
+            return match ? match[1] : "";
+          }
+          var param = getUrlParam("stress_value");
+          if (param <= 3) {
+            result = '<progress class="progress is-success" value=' + param + ' max="10">' + (param / 10) + '%</progress>';
+            msg = "Your doing great!";
+          } else if (param > 3 && param <= 7) {
+            result = '<progress class="progress is-warning" value=' + param + ' max="10">' + (param / 10) + '%</progress>';
+            msg = "You seem like you could benefit from some breathing excersizes!";
+          } else {
+            result = '<progress class="progress is-danger" value=' + param + ' max="10">' + (param / 10) + '%</progress>';
+            msg = "Don't be afraid to take some time for yourself to unwind. It seems like you deserve it!";
+          }
+          document.getElementById("graph").innerHTML = result;
+          document.getElementById("msg").innerHTML = msg;
         </script>
         <div class="buttons">
-         <div style="position: absolute; right: 5px;">
-          <a class=""href="RecordStress.html"><button class="button is-large is-link is-outlined">Record your stress</button>
-         </div>
+          <div style="position: absolute; right: 5px;">
+            <a class="" href="RecordStress.html"><button class="button is-large is-link is-outlined">Record your
+                stress</button>
+          </div>
         </div>
       </div>
     </div>
